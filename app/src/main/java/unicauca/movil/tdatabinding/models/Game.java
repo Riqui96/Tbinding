@@ -1,11 +1,10 @@
 package unicauca.movil.tdatabinding.models;
 
-/**
- * Created by EQUIPO on 17/04/2017.
- */
+
 
 public class Game {
     String nombre, genero, img, descripcion;
+    boolean mayor18;
 
     public String getNombre() {
         return nombre;
@@ -37,5 +36,13 @@ public class Game {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public boolean isMayor18() {
+        return mayor18;
+    }
+
+    public void setMayor18(boolean mayor18) {
+        this.mayor18 = mayor18;
     }
 }

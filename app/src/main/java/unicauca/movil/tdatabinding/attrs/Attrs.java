@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-/**
- * Created by EQUIPO on 17/04/2017.
- */
+
 
 public class Attrs {
 

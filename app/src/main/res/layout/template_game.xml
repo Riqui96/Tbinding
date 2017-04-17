@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    
+    <data>
+
+        <import type="android.view.View" alias="V"/>
+        
+        <variable
+            name="game"
+            type="unicauca.movil.tdatabinding.models.Game"/>
+        
+    </data>
+
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#333"
+            app:imgUrl="@{game.img}"
+            />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            tools:text="Nombre del juego"
+            android:text="@{game.nombre}"
+            app:fontTtf='@{"brush"}'
+            />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@{game.genero ?? @string/no_genero}"
+            tools:text="Genero"
+            app:fontTtf='@{"pristina"}'
+            />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            tools:text="@string/mayor18"
+            android:visibility="@{game.mayor18 ? V.VISIBLE:V.GONE}"
+            />
+
+    </LinearLayout>
+</layout>

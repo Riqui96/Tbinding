@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Tdatabinding</string>
+    <string name="no_genero">Sin clasificar</string>
+    <string name="mayor18">Años 18+</string>
 </resources>

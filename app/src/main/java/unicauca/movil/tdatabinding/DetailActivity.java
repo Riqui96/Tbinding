@@ -6,8 +6,11 @@ import android.view.View;
 
 import unicauca.movil.tdatabinding.databinding.ActivityDetailBinding;
 import unicauca.movil.tdatabinding.models.Game;
+import unicauca.movil.tdatabinding.util.C;
 
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public static final String EXTRA_POS ="pos";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,14 +18,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         ActivityDetailBinding binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Game game = new Game();
-        game.setNombre("Evil Within");
-        game.setGenero("Terror");
-        game.setDescripcion("Juego de terror para mayores de edad");
-        game.setImg("http://www.powerpyx.com/wp-content/uploads/the-evil-within.jpg");
+        int pos = getIntent().getIntExtra(EXTRA_POS,0); //asumo que llega posicion bajo esa etiqueta
 
-        binding.setGame(game);
 
+        binding.setGame(C.data.get(pos));
         binding.btn.setOnClickListener(this);
     }
 
