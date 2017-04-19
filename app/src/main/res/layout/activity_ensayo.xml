@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="ensayo"
+            type="unicauca.movil.tdatabinding.models.Game"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#333"
+            android:layout_marginTop="10dp"
+            app:imgUrl="@{ensayo.img}" />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{ensayo.nombre}"
+            tools:text="Nombre Juego" />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{ensayo.genero}"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="10dp"
+            tools:text="Genero"
+            app:fontTtf='@{"pristina"}' />
+
+    </LinearLayout>
+</layout>
+

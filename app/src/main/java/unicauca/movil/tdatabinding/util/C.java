@@ -4,9 +4,7 @@ import java.util.List;
 
 import unicauca.movil.tdatabinding.models.Game;
 
-/**
- * Created by EQUIPO on 17/04/2017.
- */
+
 
 public class C {
 

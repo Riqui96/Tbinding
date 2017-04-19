@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_POS, i);
+        intent.putExtra(EnsayoActivity.EXTRA_POSL,i);
         startActivity(intent);
     }
 }
