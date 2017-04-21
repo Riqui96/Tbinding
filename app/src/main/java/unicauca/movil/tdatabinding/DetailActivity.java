@@ -22,8 +22,6 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
         pos = getIntent().getIntExtra(EXTRA_POS,0); //asumo que llega posicion bajo esa etiqueta
 
-
-
         binding.setGame(C.data.get(pos));
         binding.btn.setOnClickListener(this);
     }

@@ -78,9 +78,5 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         intent.putExtra(DetailActivity.EXTRA_POS, i);
         startActivity(intent);
 
-        /*Intent intent1 = new Intent(this, EnsayoActivity.class);
-        intent1.putExtra(EnsayoActivity.EXTRA_POSL,i);
-        startActivity(intent1);*/
-
     }
 }
