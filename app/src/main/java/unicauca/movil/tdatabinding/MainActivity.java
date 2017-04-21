@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import unicauca.movil.tdatabinding.adapters.GameAdapter;
+import unicauca.movil.tdatabinding.databinding.ActivityEnsayoBinding;
 import unicauca.movil.tdatabinding.databinding.ActivityMainBinding;
 import unicauca.movil.tdatabinding.models.Game;
 import unicauca.movil.tdatabinding.util.C;
@@ -75,7 +76,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_POS, i);
-        intent.putExtra(EnsayoActivity.EXTRA_POSL,i);
         startActivity(intent);
+
+        /*Intent intent1 = new Intent(this, EnsayoActivity.class);
+        intent1.putExtra(EnsayoActivity.EXTRA_POSL,i);
+        startActivity(intent1);*/
+
     }
 }
